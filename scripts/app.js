@@ -81,4 +81,8 @@ $(document).ready(function() {
 	});
 
 
+	var storage = function () {
+		localstorage.setItem("name", item);
+	};
+
 });
