@@ -40,7 +40,7 @@ $(document).ready(function() {
 	    task.remove();
 	};
 
-	$('saveNewItem').on('click', function (e) {
+	$('#saveNewItem').on('click', function (e) {
 		e.preventDefault();
 		var task = $('#newItemInput').val().trim();
 		addTask(task);
@@ -74,6 +74,11 @@ $(document).ready(function() {
 		$('#archivedList').append(changeIcon);
 	});
 
+	$(document).on('click', '#archived', function(e) {
+		e.preventDefault();
+		var task = this;
+		advanceTask(task);
+	});
 
 
 });
